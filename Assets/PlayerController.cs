@@ -14,22 +14,22 @@ public class PlayerController : MonoBehaviour
        // ¶–îˆó
        if (Input.GetKey(KeyCode.LeftArrow))
         {
-            transform.Translate(0, -0.05f, 0);
+            transform.Translate(0, -0.1f, 0);
         }
         // ‰E–îˆó
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            transform.Translate(0, 0.05f, 0);
+            transform.Translate(0, 0.1f, 0);
         }
         // ã–îˆó
         if (Input.GetKey(KeyCode.UpArrow))
         {
-            transform.Translate(-0.05f, 0, 0);
+            transform.Translate(-0.1f, 0, 0);
         }
         // ‰º–îˆó
         if (Input.GetKey(KeyCode.DownArrow))
         {
-            transform.Translate(0.05f, 0, 0);
+            transform.Translate(0.1f, 0, 0);
         }
     }
 }
