@@ -32,7 +32,7 @@ public class EnemyController : MonoBehaviour
         {
             // 監督スクリプトにプレイヤと衝突したことを伝える
             GameObject director = GameObject.Find("GameDirector");
-            director.GetComponent<GameDirector>().DecreaseHp();
+            director.GetComponent<GameDirector>().DecreaseTime();
 
             Destroy (gameObject);
         }
