@@ -1,27 +1,23 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ScoreManager : MonoBehaviour
+public class KyoriDirector: MonoBehaviour
 {
+    GameObject Kyori;
+    float meter;
 
-    public GameObject score_object = null; // Textオブジェクト
-    public int score_num = 0; // スコア変数
-
-    // 初期化
     void Start()
     {
+        Kyori = GameObject.Find("Kyori");
     }
 
-    // 更新
     void Update()
     {
-        // オブジェクトからTextコンポーネントを取得
-        Text score_text = score_object.GetComponent<Text>();
-        // テキストの表示を入れ替える
-        score_text.text = "Kyori:" + score_num;
-
-        score_num += 1; // とりあえず1加算し続けてみる
+        Debug.Log("Kyori");
+        meter += Time.deltaTime * 60;
+        Kyori.GetComponent<Text>().text = meter.ToString("F1") + "km";
     }
 }

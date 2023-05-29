@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEditor.PlayerSettings;
+
 
 public class PlayerController : MonoBehaviour
 {
+    Animator PlayerAnime;
+
     //x²•ûŒü‚ÌˆÚ“®”ÍˆÍ‚ÌÅ¬’l
     [SerializeField] private float _minX = -10.5f;
     //x²•ûŒü‚ÌˆÚ“®”ÍˆÍ‚ÌÅ‘å’l
@@ -16,15 +18,16 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         Application.targetFrameRate = 60;
+        PlayerAnime = GetComponent<Animator>();
     }
 
     private void Update()
     {
-
         float speed = 0.1f;
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
         transform.position += new Vector3(x * speed, y * speed, 0);
+        PlayerAnime.SetFloat("tamamitune", y);
 
         Vector3 pos = transform.position;
 
@@ -35,6 +38,6 @@ public class PlayerController : MonoBehaviour
 
         transform.position = pos;
 
-
+        
     }
 }
