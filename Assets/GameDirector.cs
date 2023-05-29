@@ -21,6 +21,8 @@ public class GameDirector : MonoBehaviour
 
     public void DecreaseTime()
     {
-        this.Time_gauge.GetComponent<Image>().fillAmount -= 1.0f / 600.0f;
+        time -= Time.deltaTime;
+        this.Time_gauge.GetComponent<Image>().fillAmount -= 1.0f / 600.0f; 
+        this.Time_gauge.GetComponent<Image>().fillAmount -= 0.1f;
     }
 }
