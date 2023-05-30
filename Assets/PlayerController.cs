@@ -6,6 +6,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     Animator PlayerAnime;
+    GameObject gameDirector;
 
     //x²•ûŒü‚ÌˆÚ“®”ÍˆÍ‚ÌÅ¬’l
     [SerializeField] private float _minX = -10.5f;
@@ -17,7 +18,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float _maxY = 4.5f;
     void Start()
     {
-        Application.targetFrameRate = 60;
+        gameDirector = GameObject.Find("GameDirector");
         PlayerAnime = GetComponent<Animator>();
     }
 
@@ -38,6 +39,17 @@ public class PlayerController : MonoBehaviour
 
         transform.position = pos;
 
+
         
+    }
+    void OnTriggerEnter2D(Collider2D collider)
+    {
+        // Debug.Log("a");
+        if (collider.gameObject.tag == "Enemy tag")
+        {
+            gameDirector.GetComponent<GameDirector>().DecreaseTime();
+            Destroy(collider.gameObject);
+
+        }
     }
 }

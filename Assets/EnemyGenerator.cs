@@ -6,7 +6,7 @@ using UnityEngine;
 public class EnemyGenerator : MonoBehaviour
 {
     public GameObject EnemyPrenab;
-    float span = 0.5f;
+    float span = 0.6f;
     float delta = 0;
     
     void Update()

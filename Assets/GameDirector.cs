@@ -1,17 +1,21 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;    // UI‚ðŽg‚¤‚Ì‚Å–Y‚ê‚¸‚É  
+using UnityEngine.SceneManagement;
 
 public class GameDirector : MonoBehaviour
 {
-    GameObject Kyori;
-    float meter;
+    int hit =0;
 
-    public float limit = 1.0f / 6000.0f;
     GameObject Time_gauge;
-    float time = 1.0f;
+    GameObject Kyori;
+    
+
+    [SerializeField] float limit;
+    [SerializeField] float time; 
+    float meter;
+    
 
     void Start()
     {
@@ -23,13 +27,22 @@ public class GameDirector : MonoBehaviour
     {
         meter += Time.deltaTime;
         Kyori.GetComponent<Text>().text = meter.ToString("F2") + "km";
-        this.Time_gauge.GetComponent<Image>().fillAmount -= limit;
+
+        time -= 1.0f / limit * Time.deltaTime;
+        this.Time_gauge.GetComponent<Image>().fillAmount -= 1.0f / limit * Time.deltaTime;
+
+        if (this.Time_gauge.GetComponent<Image>().fillAmount <= 0)
+        {
+            Debug.Log("b");
+            SceneManager.LoadScene("TitleScene");
+        }
     }
 
     public void DecreaseTime()
     {
-        time -= Time.deltaTime;
-        this.Time_gauge.GetComponent<Image>().fillAmount -= 1.0f / 600.0f; 
-        this.Time_gauge.GetComponent<Image>().fillAmount -= 0.1f;
+        //this.Time_gauge.GetComponent<Image>().fillAmount -= 1.0f / 600.0f; 
+        Time_gauge.GetComponent<Image>().fillAmount -= 0.1f;
+        time -= 1.0f / limit;
     }
+
 }
