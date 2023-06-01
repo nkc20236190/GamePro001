@@ -15,7 +15,6 @@ public class GameDirector : MonoBehaviour
     [SerializeField] float limit;
     [SerializeField] float time; 
     float meter;
-    
 
     void Start()
     {
