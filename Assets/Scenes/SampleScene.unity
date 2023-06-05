@@ -310,7 +310,7 @@ CapsuleCollider2D:
   m_Offset: {x: -0.002245068, y: -0.015722241}
   m_Size: {x: 0.4198898, y: 0.7253467}
   m_Direction: 0
---- !u!1 &202045407
+--- !u!1 &70797332
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -318,25 +318,24 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 202045409}
-  - component: {fileID: 202045408}
+  - component: {fileID: 70797334}
+  - component: {fileID: 70797333}
   m_Layer: 0
-  m_Name: "\u301010\u5206\u8010\u4E45\u3011\u661F\u306E\u30AB\u30FC\u30D3\u30A3Wii 
-    \u7A7A\u306E\u30EF\u30EB\u30C4  BGM  \u3000Kirby\u2019s Return to Dream Land\u3000OST"
+  m_Name: "\u30C6\u30EA\u30FC\u306E\u30EF\u30F3\u30C0\u30FC\u30E9\u30F3\u30C93D\u3000\u679C\u3066\u3057\u306A\u304D\u65C5"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!328 &202045408
+--- !u!328 &70797333
 VideoPlayer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 202045407}
+  m_GameObject: {fileID: 70797332}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: fae05c6e2844c294cb8fc82ce8d5d84b, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 62e832fb4bee59747ab73bce671694f0, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 519420031}
@@ -364,13 +363,13 @@ VideoPlayer:
   m_WaitForFirstFrame: 1
   m_FrameReadyEventEnabled: 0
   m_VideoShaders: []
---- !u!4 &202045409
+--- !u!4 &70797334
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 202045407}
+  m_GameObject: {fileID: 70797332}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
